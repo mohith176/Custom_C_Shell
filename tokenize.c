@@ -30,6 +30,18 @@ void maketokens(char *input, char *homedir, char *prevdir, char *details, int lo
   {
     return;
   }
+
+    // Check if input contains pipes or redirection
+    if (strchr(input, '|') != NULL || strchr(input, '>') != NULL || strchr(input, '<') != NULL) {
+      pipe_info info;
+      parse_redirection_and_pipes(input, &info);
+      execute_with_redirection_and_pipes(&info, homedir, prevdir, details);
+      
+      if (logflag != 1) {
+        add_input(input, log_data, log_count);
+      }
+      return;
+    }
   char input_copy[4096];
   strcpy(input_copy, input);
   for (int i = 0; i < strlen(input); i++)
