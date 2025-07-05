@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "tokenize.h": "c"
+        "tokenize.h": "c",
+        "syscmd.h": "c"
     }
 }

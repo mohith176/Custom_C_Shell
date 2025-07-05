@@ -1,15 +1,15 @@
-sleep 200
-activities
-sleep 200 &
-reveal
-reveal -l
-reveal /home
-reveal -l /home
-reveal -a
-reveal -al
-reveal -la
-reveal  -lala
 reveal
 reveal -l
 reveal -a
 reveal -al
+sleep 5
+sleep 10 &
+seek test
+seek proclore
+seek -d log
+seek -d fgnbg
+seek fgnbg
+seek -f fgnbg
+seek -l proclore
+seek ./a.out
+seek a.out

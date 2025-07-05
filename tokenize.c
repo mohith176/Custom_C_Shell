@@ -164,6 +164,10 @@ void maketokens(char *input, char *homedir, char *prevdir, char *details, int lo
       {
         reveal_cmd(arguments, narg, homedir);
       }
+      else if(strcmp(command,"seek")==0)
+      {
+        seek_cmd(arguments, narg, homedir);
+      }
       else if(strcmp(command,"bg")==0)
       {
         if(narg == 1)
