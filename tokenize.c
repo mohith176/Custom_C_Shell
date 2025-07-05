@@ -1,4 +1,5 @@
 #include "tokenize.h"
+
 char *insert(int pos, char *str, char a)
 {
   int len = strlen(str);
@@ -158,6 +159,10 @@ void maketokens(char *input, char *homedir, char *prevdir, char *details, int lo
         {
           ping(atoi(arguments[0]),atoi(arguments[1]));
         }
+      }
+      else if(strcmp(command,"reveal")==0)
+      {
+        reveal_cmd(arguments, narg, homedir);
       }
       else if(strcmp(command,"bg")==0)
       {
